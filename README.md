@@ -48,7 +48,7 @@ JSON input:
 
 ## Get items by their availability
 ### Request
-`http verb`
+`GET /api/items/availability/{availability}`
 
 URL:
 
@@ -62,7 +62,7 @@ JSON output:
 
 ## Get items of a specific color
 ### Request
-`http verb`
+`GET /api/items/color/{color}`
 
 URL:
 
@@ -76,7 +76,7 @@ JSON output:
 
 ## Delete items by their id
 ### Request
-`http verb`
+`DELETE /api/items/delete/{id}`
 
 URL:
 
@@ -90,7 +90,7 @@ JSON output:
 
 ## Get items by their id
 ### Request
-`http verb`
+`GET /api/items/id/{id}`
 
 URL:
 
@@ -104,7 +104,7 @@ JSON output:
 
 ## Get items by their name
 ### Request
-`http verb`
+`GET /api/items/name/{name}`
 
 URL:
 
@@ -118,7 +118,7 @@ JSON output:
 
 ## Change an item's description
 ### Request
-`http verb`
+`PATCH /api/items/patch/{id}/{new_description}`
 
 URL:
 
@@ -132,7 +132,7 @@ JSON output:
 
 ## Get items that are lower than a price
 ### Request
-`http verb`
+`GET /api/items/price/max/{max}`
 
 URL:
 
@@ -146,7 +146,7 @@ JSON output:
 
 ## Get items that are greater than a price
 ### Request
-`http verb`
+`GET /api/items/price/min/{min}`
 
 URL:
 
@@ -160,7 +160,7 @@ JSON output:
 
 ## Get items that are within a price range
 ### Request
-`http verb`
+`GET /api/items/price/range/{max}/{min}`
 
 URL:
 
@@ -174,7 +174,7 @@ JSON output:
 
 ## Get items that are exactly a price
 ### Request
-`http verb`
+`GET /api/items/price/{price}`
 
 URL:
 
@@ -188,7 +188,7 @@ JSON output:
 
 ## Get items of a certain size
 ### Request
-`http verb`
+`GET /api/items/size/{size}`
 
 URL:
 
@@ -202,7 +202,7 @@ JSON output:
 
 ## Get an 418 http status code: "I'm a teapot"
 ### Request
-`http verb`
+`GET /api/teapot`
 
 URL:
 
