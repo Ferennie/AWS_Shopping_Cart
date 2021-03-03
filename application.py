@@ -1,4 +1,4 @@
-from flask import Flask, request, jsonify
+from flask import Flask, request
 from flask_restplus import Resource, Api
 from flask_restplus import fields
 from flask_sqlalchemy import SQLAlchemy
@@ -178,24 +178,24 @@ class ItemPriceRoute(Resource):
 @ns.route("/items/price/max/<float:max>")
 class ItemMaxPriceRoute(Resource):
     @api.marshal_with(item_id)
-    def get(self, max):
-        return Item.query.filter(Item.price <= max).all()
+    def get(self, maximum):
+        return Item.query.filter(Item.price <= maximum).all()
 
 
 # returns items that cost more than min
 @ns.route("/items/price/min/<float:min>")
 class ItemMinPriceRoute(Resource):
     @api.marshal_with(item_id)
-    def get(self, min):
-        return Item.query.filter(Item.price >= min).all()
+    def get(self, minimum):
+        return Item.query.filter(Item.price >= minimum).all()
 
 
 # returns item within the price range
 @ns.route("/items/price/range/<float:max>/<float:min>")
 class ItemMinPriceRoute(Resource):
     @api.marshal_with(item_id)
-    def get(self, max, min):
-        return Item.query.filter(min <= Item.price, max >= Item.price).all()
+    def get(self, maximum, minimum):
+        return Item.query.filter(minimum <= Item.price, maximum >= Item.price).all()
 
 
 # returns item with corresponding size
