@@ -16,7 +16,7 @@ The shopping cart API is described below.
 
 URL:
 
-    http://127.0.0.1:5000/api/items
+    /api/items
     
 JSON input:
 
@@ -59,7 +59,7 @@ JSON Output:
 
 URL:
  
-    http://127.0.0.1:5000/api/items
+    /api/items
 
 JSON input:
 
@@ -94,7 +94,7 @@ JSON Output:
 
 URL:
 
-    http://127.0.0.1:5000/api/items/availability/True
+    /api/items/availability/True
 
 JSON input:
 
@@ -130,7 +130,7 @@ JSON output:
 
 URL:
 
-    "http://127.0.0.1:5000/api/items/color/red"
+    /api/items/color/red
 
 JSON input:
 
@@ -165,7 +165,7 @@ JSON output:
 
 URL:
 
-    http://127.0.0.1:5000/api/items/delete/1
+    /items/delete/1
     
 JSON input:
 
@@ -198,7 +198,7 @@ JSON output:
 
 URL:
 
-    http://127.0.0.1:5000/api/items/id/2
+    /api/items/id/2
 
 JSON input:
 
@@ -232,7 +232,7 @@ JSON output:
 
 URL:
 
-    http://127.0.0.1:5000/api/items/name/jeans
+    /api/items/name/jeans
 
 JSON input:
 
@@ -265,13 +265,6 @@ JSON output:
 
 ### Request
 `PATCH /api/items/patch/{id}/{new_description}`
-
-URL:
-
-    http://127.0.0.1:5000/api/items/patch/2/skinny
-
-JSON input:
-
 ### Response
 
 http status code:
@@ -299,15 +292,6 @@ JSON output:
 
 ### Request
 `GET /api/items/price/max/{max}`
-
-URL:
-
-    http://127.0.0.1:5000/api/items/price/max/20
-
-JSON input:
-
-    
-
 ### Response
 
 http status code:
@@ -320,11 +304,6 @@ JSON output:
 
 ### Request
 `GET /api/items/price/min/{min}`
-
-URL:
-
-JSON input:
-
 ### Response
 
 http status code:
@@ -338,10 +317,6 @@ JSON output:
 ### Request
 `GET /api/items/price/range/{max}/{min}`
 
-URL:
-
-JSON input:
-
 ### Response
 
 http status code:
@@ -353,11 +328,6 @@ JSON output:
 ## Get items that are exactly a price
 ### Request
 `GET /api/items/price/{price}`
-
-URL:
-
-JSON input:
-
 ### Response
 
 http status code:
@@ -369,13 +339,6 @@ JSON output:
 ## Get items of a certain size
 ### Request
 `GET /api/items/size/{size}`
-
-URL:
-
-    http://127.0.0.1:5000/api/items/size/2
-
-JSON input:
-
 ### Response
 
 http status code:
@@ -403,13 +366,6 @@ JSON output:
 ## Get an 418 http status code: "I'm a teapot"
 ### Request
 `GET /api/teapot`
-
-URL:
-
-    http://127.0.0.1:5000/api/teapot
-    
-JSON input:
-
 ### Response
 
 http status code:
